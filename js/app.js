@@ -1,1 +1,1 @@
-console.log('github check');
+console.log('sanity check');
