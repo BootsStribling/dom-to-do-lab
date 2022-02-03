@@ -1,4 +1,4 @@
-console.log('sanity check');
+// console.log('sanity check');
 
 
 
@@ -21,9 +21,9 @@ const reset = document.querySelector('#reset-button');
 
 //addToDo Button
 addToDo.addEventListener('click', function (evt){
-  // if(inp.value === ''){
-  //   alert('Please type a To-Do')
-  // }else{
+  if(inp.value === ''){
+    alert('Please type a To-Do')
+  }else{
   //create a new li element
   let newLi = document.createElement('li','#items')
   //value of input text = to new li element
@@ -32,12 +32,13 @@ addToDo.addEventListener('click', function (evt){
   inp.value = '';
   //add the new li to html inside ul
   toDoList.appendChild(newLi)
-  // }
+  }
 });
 
 // reset Button
 reset.addEventListener('click', function(evt){
   toDoList.innerHTML = null;
+  inp.placeholder = 'Your To-do Here'
 })
 
 //delete li on click Button
